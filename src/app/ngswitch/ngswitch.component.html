@@ -1,0 +1,7 @@
+<div [ngSwitch]="person.name">
+  <span *ngSwitchCase="'Einstein'">Genius Physicist: {{ person.firstName }} {{ person.name }}</span>
+  <span *ngSwitchCase="'Curie'">Pioneering Chemist: {{ person.firstName }} {{ person.name }}</span>
+  <span *ngSwitchCase="'Shakespeare'">Famous Playwright: {{ person.firstName }} {{ person.name }}</span>
+  <!-- More cases -->
+  <span *ngSwitchDefault>Historical Figure: {{ person.firstName }} {{ person.name }}</span>
+</div>

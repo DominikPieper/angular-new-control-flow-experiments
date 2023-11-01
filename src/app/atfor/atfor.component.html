@@ -1,0 +1,28 @@
+
+@for (person of historicalPeople; track $index) {
+  <div>{{ person.firstName }} {{ person.name }}</div>
+}
+
+<br/>
+
+@for (entry of emptyArray; track $index) {
+  <div>{{ entry }}</div>
+} @empty {
+  I'm empty
+}
+
+<div>
+  <div>
+    @for (entry of emptyArray; track $index) {
+      <div>{{ entry }}</div>
+    } @empty {
+      <div>I'm empty</div>
+    }
+  </div>
+</div>
+
+<br>
+
+@for (person of historicalPeople; let idx = $index, even = $even; track idx) {
+  <div [style.color]="even ? 'blue' : 'red'">{{ person.firstName }} {{ person.name }}</div>
+}

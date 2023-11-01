@@ -1,0 +1,10 @@
+
+<div *ngIf="person; else noPerson">
+  Person is available: {{ person.firstName }} {{ person.name }}.
+</div>
+
+<ng-template #noPerson>
+  <div>
+    No person available.
+  </div>
+</ng-template>

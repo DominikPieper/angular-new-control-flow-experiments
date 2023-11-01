@@ -1,0 +1,27 @@
+<button #deferButton>Load stuff</button>
+
+@defer (on interaction(deferButton)) {
+  <div>Hello I'm lazy</div>
+}
+
+
+<div #scrollIn>Hello!</div>
+
+@defer (on viewport(scrollIn)){
+  <div>Grüß dich</div>
+}
+
+
+@defer (when cond){
+  I'm lazy with placeholder
+} @placeholder {
+  I just block space
+}
+
+
+@defer (when cond){
+  <div>Super duper big component</div>
+} @error {
+  <p>Failed to load the component</p>
+  <p><strong>Error:</strong> Failed to load defer block</p>
+}

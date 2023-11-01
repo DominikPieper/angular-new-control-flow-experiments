@@ -1,0 +1,15 @@
+
+@switch(person.name) {
+  @case('Einstein') {
+    <span>Genius Physicist: {{ person.firstName }} {{ person.name }}</span>
+  }
+  @case('Curie') {
+    <span>Pioneering Chemist: {{ person.firstName }} {{ person.name }}</span>
+  }
+  @case('Shakespeare') {
+    <span>Famous Playwright: {{ person.firstName }} {{ person.name }}</span>
+  }
+  @default {
+    <span>Historical Figure: {{ person.firstName }} {{ person.name }}</span>
+  }
+}
